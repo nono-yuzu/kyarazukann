@@ -25,7 +25,7 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Do any additional setup after loading the view.
         
         array = saveDeta.object(forKey: "store") as! [String]
-        
+        //ここが分からないです分からないです↑
         table.dataSource = self
         table.delegate = self
         
