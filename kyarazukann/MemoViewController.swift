@@ -17,12 +17,14 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
     var number:Int! = nil
     var saveDeta: UserDefaults = UserDefaults.standard
     var titleArray: Array = [String]()
-    
+    var array: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
+        array = saveDeta.object(forKey: "store") as! [String]
         
         table.dataSource = self
         table.delegate = self
