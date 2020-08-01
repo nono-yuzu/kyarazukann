@@ -23,7 +23,7 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        
+        //titlededaのtiindexpathを表示する
         array = saveDeta.object(forKey: "store") as! [String]
         //ここが分からないです分からないです↑
         table.dataSource = self

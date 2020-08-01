@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF50D89224D4FBE0009BCB68 /* TitleSetTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF50D89124D4FBE0009BCB68 /* TitleSetTestViewController.swift */; };
 		FFE799E0248779F60065DC6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE799DF248779F60065DC6E /* AppDelegate.swift */; };
 		FFE799E2248779F60065DC6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE799E1248779F60065DC6E /* SceneDelegate.swift */; };
 		FFE799E4248779F60065DC6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE799E3248779F60065DC6E /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF50D89124D4FBE0009BCB68 /* TitleSetTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSetTestViewController.swift; sourceTree = "<group>"; };
 		FFE799DC248779F60065DC6E /* kyarazukann.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kyarazukann.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE799DF248779F60065DC6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFE799E1248779F60065DC6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				FFE79A6624A75A980065DC6E /* MemoSetViewController.swift */,
 				FFE79A60249CB0730065DC6E /* MemoViewController.swift */,
 				FFE79A6424A7305A0065DC6E /* NoteViewController.swift */,
+				FF50D89124D4FBE0009BCB68 /* TitleSetTestViewController.swift */,
 			);
 			path = kyarazukann;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF50D89224D4FBE0009BCB68 /* TitleSetTestViewController.swift in Sources */,
 				FFE79A6524A7305A0065DC6E /* NoteViewController.swift in Sources */,
 				FFE79A6324A72A0A0065DC6E /* TitleSetViewController.swift in Sources */,
 				FFE799E4248779F60065DC6E /* ViewController.swift in Sources */,

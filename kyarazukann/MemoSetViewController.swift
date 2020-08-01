@@ -10,23 +10,27 @@ import UIKit
 
 class MemoSetViewController: UIViewController,UITextFieldDelegate {
 
- //   override func viewDidLoad() {
- //       super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-  //  }
     @IBOutlet var titleTextField: UITextField!
            
            var contentsArray: [String] = []
            var number:Int! = nil
            var saveDeta: UserDefaults = UserDefaults.standard
            var array: [String] = []
+    
+    
+    
+    override func viewDidLoad() {
+          super.viewDidLoad()
+          
+
+          // Do any additional setup after loading the view.
+      }
 
 
     
     override func viewWillAppear(_ animated: Bool) {
            super.viewWillAppear(animated)
-           
       
            
            if number == nil {

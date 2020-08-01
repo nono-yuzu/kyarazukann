@@ -19,20 +19,20 @@
                                 <rect key="frame" x="87" y="121" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmx-Iw-BTs">
-                                <rect key="frame" x="152" y="435" width="110" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="書く１"/>
-                                <connections>
-                                    <segue destination="f63-oC-T0I" kind="show" id="T9N-T6-RXi"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mpz-E4-EgW">
                                 <rect key="frame" x="152" y="541" width="110" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="セル１"/>
                                 <connections>
                                     <segue destination="AlG-aU-uMm" kind="show" id="DGr-cX-SNz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmx-Iw-BTs">
+                                <rect key="frame" x="152" y="428" width="110" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="書く１"/>
+                                <connections>
+                                    <segue destination="f63-oC-T0I" kind="show" id="Nvb-pb-tek"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -43,7 +43,33 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="776.81159420289862" y="72.554347826086968"/>
+            <point key="canvasLocation" x="738" y="73"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="edX-QG-rag">
+            <objects>
+                <viewController id="5tk-Yv-dfc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="41X-d9-3ux">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BYi-IB-7TU">
+                                <rect key="frame" x="69" y="238" width="302" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="S4q-oS-OMB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="s9b-7P-dvf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="H1F-cL-fwT"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6jl-im-QZv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="739" y="-735"/>
         </scene>
         <!--Title Set View Controller-->
         <scene sceneID="297-i4-qSi">
@@ -109,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fzi-sg-ypl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2560.8695652173915" y="-730.43478260869574"/>
+            <point key="canvasLocation" x="2561" y="-735"/>
         </scene>
         <!--Note View Controller-->
         <scene sceneID="2NY-UG-9GS">
@@ -235,7 +261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4kH-fT-AYr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2573.913043478261" y="72.554347826086968"/>
+            <point key="canvasLocation" x="2561" y="73"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bF0-r1-ilz">
