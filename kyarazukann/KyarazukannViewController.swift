@@ -40,10 +40,13 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
             
         } else {
             titleDeta = saveDeta.object(forKey: "title") as! [String]
+      //      print(titleDeta[number])
+     //       titleTextField.text = titleDeta[number]
+            
             
             //titleArray = saveData.object(forKey: "title") as! [String]
         }
-        //print(titleDeta)
+        print(titleDeta)
         
         table.reloadData()
     }

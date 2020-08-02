@@ -37,8 +37,16 @@ class TitleSetViewController: UIViewController, UITextFieldDelegate {
         
         
 
-        number = (saveDeta.object(forKey: "title") as! [String]).count
-        print(number)
+ //       number = (saveDeta.object(forKey: "title") as! [String]).count
+ //       print(number)
+        
+        
+        if saveDeta == nil {
+            
+        } else {
+            number = (saveDeta.object(forKey: "title") as! [String]).count
+            print(number)
+        }
         
         
         if number == 0 {
