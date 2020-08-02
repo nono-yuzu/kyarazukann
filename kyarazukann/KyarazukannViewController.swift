@@ -13,10 +13,8 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet var table: UITableView!
     
     var saveData: UserDefaults = UserDefaults.standard
-    //var titleArray: Array = [String]()
     var number: Int! = nil
     var titleDeta: [String] = []
-    // var number:Int! = nil
     var saveDeta: UserDefaults = UserDefaults.standard
     
     override func viewDidLoad() {
@@ -40,15 +38,14 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
             
         } else {
             titleDeta = saveDeta.object(forKey: "title") as! [String]
-      //      print(titleDeta[number])
-     //       titleTextField.text = titleDeta[number]
-            
-            
-            //titleArray = saveData.object(forKey: "title") as! [String]
+            //問題あり
+                       print(titleDeta[number])
+                      
+        
         }
         print(titleDeta)
         
-        table.reloadData()
+    table.reloadData()
     }
     
     

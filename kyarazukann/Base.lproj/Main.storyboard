@@ -201,7 +201,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="srb-zz-7pY"/>
                     <connections>
-                        <outlet property="table" destination="vc9-tf-oQH" id="gF6-lI-I7B"/>
+                        <outlet property="table" destination="vc9-tf-oQH" id="qoP-mp-rt0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bUg-9K-J1l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
