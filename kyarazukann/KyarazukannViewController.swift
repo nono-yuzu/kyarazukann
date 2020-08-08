@@ -12,7 +12,7 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBOutlet var table: UITableView!
     
-    var saveData: UserDefaults = UserDefaults.standard
+//    var saveData: UserDefaults = UserDefaults.standard
     var number: Int! = nil
     var titleDeta: [String] = []
     var saveDeta: UserDefaults = UserDefaults.standard
