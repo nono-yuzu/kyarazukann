@@ -20,6 +20,7 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
         // Do any additional setup after loading the view.
         
         table.dataSource = self
@@ -27,25 +28,38 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
         
         table.reloadData()
         
+        if number == nil {
+                          
+                      } else {
+                          titleDeta = saveDeta.object(forKey: "title") as! [String]
+                          //問題あり
+                           print(titleDeta[number])
+                          
+                      
+                      }
+                      print(titleDeta)
+                      
+                  table.reloadData()
+        
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+  override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print(number)
-        
-        
-        if number == nil {
+ //       print(number)
+ //
+ //
+ //       if number == nil {
             
-        } else {
-            titleDeta = saveDeta.object(forKey: "title") as! [String]
+ //       } else {
+   //         titleDeta = saveDeta.object(forKey: "title") as! [String]
             //問題あり
-                       print(titleDeta[number])
+     //                  print(titleDeta[number])
                       
         
-        }
-        print(titleDeta)
+     //   }
+       // print(titleDeta)
         
-    table.reloadData()
+   // table.reloadData()
     }
     
     
