@@ -30,16 +30,19 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
         
         if number == nil {
                           
-                      } else {
-                          titleDeta = saveDeta.object(forKey: "title") as! [String]
-                          //問題あり
-                           print(titleDeta[number])
+        }
+        else {
+        //    titleDeta = ["test1","test2"]
+            //titleDeta = saveDeta.object(forKey: "title") as! [String]
+            //問題あり
+            print(titleDeta[number])
                           
                       
-                      }
-                      print(titleDeta)
-                      
-                  table.reloadData()
+        }
+        print(titleDeta)
+        titleDeta = saveDeta.object(forKey: "title") as! [String]
+        //titleDeta = ["test1","test2"]
+        table.reloadData()
         
     }
     
