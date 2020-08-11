@@ -22,14 +22,14 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
         
        
         // Do any additional setup after loading the view.
-        
+        titleDeta = saveDeta.object(forKey: "title") as! [String]
         table.dataSource = self
         table.delegate = self
         
         table.reloadData()
         
         if number == nil {
-                          
+            
         }
         else {
         //    titleDeta = ["test1","test2"]
@@ -40,7 +40,7 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
                       
         }
         print(titleDeta)
-        titleDeta = saveDeta.object(forKey: "title") as! [String]
+      //  titleDeta = saveDeta.object(forKey: "title") as! [String]
         //titleDeta = ["test1","test2"]
         table.reloadData()
         
