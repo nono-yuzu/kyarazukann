@@ -50,7 +50,7 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
          //   titleTextField.text = titleDeta[number]
           
            print(array[number])
-          
+          //わからん
             
         }
         
