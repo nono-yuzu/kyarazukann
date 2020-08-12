@@ -13,7 +13,7 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet var titleTextField: UITextField!
     @IBOutlet var table: UITableView!
     
-    var titleDeta: [String] = []
+ //   var titleDeta: [String] = []
     var number:Int! = nil
     var saveDeta: UserDefaults = UserDefaults.standard
     var titleArray: Array = [String]()
@@ -24,7 +24,7 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         // Do any additional setup after loading the view.
         //titlededaのtiindexpathを表示する
-    //array = saveDeta.object(forKey: "store") as! [String]
+ //   array = saveDeta.object(forKey: "store") as! [String]
         //ここが分からないです分からないです↑
         table.dataSource = self
         table.delegate = self
@@ -45,9 +45,13 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
             
         } else {
            
-            titleDeta = saveDeta.object(forKey: "memo") as! [String]
-            print(titleDeta[number])
-            titleTextField.text = titleDeta[number]
+        //    titleDeta = saveDeta.object(forKey: "memo") as! [String]
+         //   print(titleDeta[number])
+         //   titleTextField.text = titleDeta[number]
+          
+           print(array[number])
+          
+            
         }
         
         

@@ -68,6 +68,7 @@ class TitleSetViewController: UIViewController, UITextFieldDelegate {
         storeArray.append(array)
         //storeArray.set()
         saveDeta.set(storeArray, forKey: "store")
+     //   print(saveDeta.object(forKey: "store") as! [String])
         //print(titleDeta)
         titleDeta.append(titleTextField.text!)
         print(titleDeta)

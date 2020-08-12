@@ -64,6 +64,7 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
         
    // table.reloadData()
     }
+ 
     
     
     
