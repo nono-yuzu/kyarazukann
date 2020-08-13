@@ -20,9 +20,17 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if titleDeta == nil {
+        
+        } else {
+ //           number = 
+        }
+            
+            
+        
        
         // Do any additional setup after loading the view.
-        titleDeta = saveDeta.object(forKey: "title") as! [String]
+     //   titleDeta = saveDeta.object(forKey: "title") as! [String]
         table.dataSource = self
         table.delegate = self
         
@@ -33,7 +41,7 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
         }
         else {
         //    titleDeta = ["test1","test2"]
-            //titleDeta = saveDeta.object(forKey: "title") as! [String]
+            titleDeta = saveDeta.object(forKey: "title") as! [String]
             //問題あり
             print(titleDeta[number])
                           
