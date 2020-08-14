@@ -26,9 +26,11 @@ class TitleSetViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    
         
         
         
+        UserDefaults.standard.register(defaults: ["title":titleDeta])
         // Do any additional setup after loading the view.
     }
     
