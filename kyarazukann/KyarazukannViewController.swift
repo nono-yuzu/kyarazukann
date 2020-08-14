@@ -21,20 +21,9 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if saveDeta == nil {
-            
-        } else {
-            number = (saveDeta.object(forKey: "title") as! [String]).count
-            print(number)
-            
-        }
-            
-   //         if saveDeta == nil {
-                       
-    //               } else {
-     //                  number = (saveDeta.object(forKey: "title") as! [String]).count
-   //                    print(number)
-    //               }
+       
+    //    userDefaults.register(defaults: []
+      // ここをどーにかする!
         
        
         // Do any additional setup after loading the view.
