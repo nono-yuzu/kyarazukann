@@ -31,14 +31,23 @@ class MemoSetViewController: UIViewController,UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
            super.viewWillAppear(animated)
+        
+        if saveDeta == nil {
+               
+        } else {
+            number = (saveDeta.object(forKey: "memo") as! [String]).count
+            print(number)
+           }
       
            
            if number == nil {
                
            } else {
                contentsArray = saveDeta.object(forKey: "memo") as! [String]
-               print(contentsArray[number])
-               titleTextField.text = contentsArray[number]
+           // print(contentsArray[number])
+            number = (saveDeta.object(forKey: "memo") as! [String]).count
+                           print(number)
+            titleTextField.text = contentsArray[number]
            }
            titleTextField.delegate = self
        }
