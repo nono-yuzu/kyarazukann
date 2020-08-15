@@ -21,10 +21,15 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
-    //    userDefaults.register(defaults: []
+        UserDefaults.standard.register(defaults: ["title":titleDeta])
+       // userDefaults.register(defaults: ["title": titleDeta]
       // ここをどーにかする!
-        
+    if saveDeta == nil {
+                   
+            } else {
+                number = (saveDeta.object(forKey: "title") as! [String]).count
+                print(number)
+               }
        
         // Do any additional setup after loading the view.
      //   titleDeta = saveDeta.object(forKey: "title") as! [String]
@@ -33,41 +38,25 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
         
         table.reloadData()
         
-        if number == nil {
-            
-        }
-        else {
-        //    titleDeta = ["test1","test2"]
-            titleDeta = saveDeta.object(forKey: "title") as! [String]
-            //問題あり
-            print(titleDeta[number])
-                          
-                      
-        }
-        print(titleDeta)
-      //  titleDeta = saveDeta.object(forKey: "title") as! [String]
-        //titleDeta = ["test1","test2"]
-        table.reloadData()
-        
     }
     
   override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
- //       print(number)
- //
- //
- //       if number == nil {
+        print(number)
+
+
+        if number == nil {
             
- //       } else {
-   //         titleDeta = saveDeta.object(forKey: "title") as! [String]
+        } else {
+            titleDeta = saveDeta.object(forKey: "title") as! [String]
             //問題あり
-     //                  print(titleDeta[number])
+     //   print(titleDeta[number])
                       
         
-     //   }
-       // print(titleDeta)
+        }
+        print(titleDeta)
         
-   // table.reloadData()
+    table.reloadData()
     }
  
     
