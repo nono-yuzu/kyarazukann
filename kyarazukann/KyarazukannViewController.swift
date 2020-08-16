@@ -24,12 +24,7 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
         UserDefaults.standard.register(defaults: ["title":titleDeta])
        // userDefaults.register(defaults: ["title": titleDeta]
       // ここをどーにかする!
-    if saveDeta == nil {
-                   
-            } else {
-                number = (saveDeta.object(forKey: "title") as! [String]).count
-                print(number)
-               }
+   
        
         // Do any additional setup after loading the view.
      //   titleDeta = saveDeta.object(forKey: "title") as! [String]
@@ -43,6 +38,13 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
   override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print(number)
+    
+    if saveDeta == nil {
+                      
+               } else {
+                   number = (saveDeta.object(forKey: "title") as! [String]).count
+                   print(number)
+                  }
 
 
         if number == nil {

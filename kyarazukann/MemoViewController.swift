@@ -13,7 +13,7 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet var titleTextField: UITextField!
     @IBOutlet var table: UITableView!
     
- //   var titleDeta: [String] = []
+//    var titleDeta: [String] = []
     var number:Int! = nil
     var saveDeta: UserDefaults = UserDefaults.standard
     var titleArray: Array = [String]()

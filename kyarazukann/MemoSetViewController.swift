@@ -23,6 +23,7 @@ class MemoSetViewController: UIViewController,UITextFieldDelegate {
     override func viewDidLoad() {
           super.viewDidLoad()
           
+        UserDefaults.standard.register(defaults:["memo":contentsArray])
 
           // Do any additional setup after loading the view.
       }
@@ -43,11 +44,14 @@ class MemoSetViewController: UIViewController,UITextFieldDelegate {
            if number == nil {
                
            } else {
-               contentsArray = saveDeta.object(forKey: "memo") as! [String]
-           // print(contentsArray[number])
+           
+            contentsArray = saveDeta.object(forKey: "memo") as! [String]
+            print(contentsArray)
+         //   print(contentsArray[number])
             number = (saveDeta.object(forKey: "memo") as! [String]).count
-                           print(number)
-            titleTextField.text = contentsArray[number]
+            print(number)
+            
+         //   titleTextField.text = contentsArray[number]
            }
            titleTextField.delegate = self
        }
