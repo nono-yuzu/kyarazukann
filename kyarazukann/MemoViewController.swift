@@ -10,14 +10,19 @@ import UIKit
 
 class MemoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet var titleTextField: UITextField!
-    @IBOutlet var table: UITableView!
+  //  @IBOutlet var titleTextField: UITextField!
+  //  @IBOutlet var table: UITableView!
     
 //    var titleDeta: [String] = []
     var number:Int! = nil
     var saveDeta: UserDefaults = UserDefaults.standard
     var titleArray: Array = [String]()
     var array: [String] = []
+    
+    @IBOutlet var titleTextField: UITextField!
+    
+    
+      @IBOutlet var table: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
