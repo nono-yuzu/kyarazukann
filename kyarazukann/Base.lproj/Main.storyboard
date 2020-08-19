@@ -204,7 +204,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="y8K-bp-3lR" kind="show" identifier="MemoViewController" id="uGp-uT-O4l"/>
+                                            <segue destination="y8K-bp-3lR" kind="show" identifier="MemoViewController" id="bhF-NE-b7j"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

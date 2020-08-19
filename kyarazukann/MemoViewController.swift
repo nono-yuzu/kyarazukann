@@ -21,7 +21,6 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet var titleTextField: UITextField!
     
-    
       @IBOutlet var table: UITableView!
     
     override func viewDidLoad() {
@@ -60,24 +59,26 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
         
-        print(titleArray)
+        print(array)
         
         table.reloadData()
         
         
     }
     
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection: Int) -> Int {
+//        return titleArray.count
+//    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection: Int) -> Int {
-        return titleArray.count
+        return array.count
     }
-    
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
         
-        cell?.textLabel?.text = String(titleArray[indexPath.row])
-        
+     //   cell?.textLabel?.text = String(titleArray[indexPath.row])
+         cell?.textLabel?.text = String(array[indexPath.row])
         return cell!
         
     }

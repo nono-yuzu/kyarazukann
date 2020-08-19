@@ -58,7 +58,7 @@ class TitleSetViewController: UIViewController, UITextFieldDelegate {
             print(titleDeta)
             number = (saveDeta.object(forKey: "title") as! [String]).count
             print(number)
-          //  print(titleDeta[number])
+            print(titleDeta[number-1])
         }
         titleTextField.delegate = self
         print(titleDeta)

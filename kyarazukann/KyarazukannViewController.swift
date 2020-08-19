@@ -52,7 +52,7 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
         } else {
             titleDeta = saveDeta.object(forKey: "title") as! [String]
             //問題あり
-     //   print(titleDeta[number])
+        print(titleDeta[number-1])
                       
         
         }
@@ -64,9 +64,7 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
     
     
     
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return titleDeta.count
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {        return titleDeta.count
     }
     
     
