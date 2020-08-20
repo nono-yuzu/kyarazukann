@@ -76,6 +76,13 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
         return cell!
         
     }
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+//        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+
+//        cell.textLabel!.text = titleDeta[indexPath.row]
+//        return cell
+//    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)

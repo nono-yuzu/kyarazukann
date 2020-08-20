@@ -203,9 +203,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="y8K-bp-3lR" kind="show" identifier="MemoViewController" id="bhF-NE-b7j"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -216,6 +213,7 @@
                     <navigationItem key="navigationItem" id="srb-zz-7pY"/>
                     <connections>
                         <outlet property="table" destination="vc9-tf-oQH" id="qoP-mp-rt0"/>
+                        <segue destination="y8K-bp-3lR" kind="show" identifier="MemoViewController" id="HoS-18-zBo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bUg-9K-J1l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
