@@ -30,6 +30,8 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
         //titlededaのtiindexpathを表示する
     // = saveDeta.object(forKey: "store") as! [String]
         //ここが分からないです分からないです↑
+        
+    
        
         table.dataSource = self
         table.delegate = self
@@ -41,13 +43,14 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if saveDeta == nil {
+    if saveDeta == nil {
                              
                       } else {
                           number = (saveDeta.object(forKey: "memo") as! [String]).count
-                          print(number)
+                        print(number)
                          }
         
         

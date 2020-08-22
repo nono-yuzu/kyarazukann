@@ -85,7 +85,7 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
 //    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        number = indexPath.row
+ //        number = indexPath.row
         tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "MemoViewController", sender: nil)
         
