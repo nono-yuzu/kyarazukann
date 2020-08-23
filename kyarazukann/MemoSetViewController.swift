@@ -12,20 +12,21 @@ class MemoSetViewController: UIViewController,UITextFieldDelegate {
 
 
     @IBOutlet var titleTextField: UITextField!
+    
            
-           var contentsArray: [String] = []
+        //   var contentsArray: [String] = []
            var number:Int! = nil
            var saveDeta: UserDefaults = UserDefaults.standard
            var array: [String] = []
            var storeArray: [[String]] = [[]]
-           var titleDeta: [String] = []
+        //   var titleDeta: [String] = []
     
     override func viewDidLoad() {
           super.viewDidLoad()
         
-  //      array = titleDeta[]
-        UserDefaults.standard.register(defaults:["memo":contentsArray])
-      //  UserDefaults.standard.register(defaults:["store":storeArray])
+        array = storeArray[0]
+     //   UserDefaults.standard.register(defaults:["memo":contentsArray])
+        UserDefaults.standard.register(defaults:["array":array])
           // Do any additional setup after loading the view.
       }
 //store
@@ -37,7 +38,7 @@ class MemoSetViewController: UIViewController,UITextFieldDelegate {
         if saveDeta == nil {
                
         } else {
-            number = (saveDeta.object(forKey: "memo") as! [String]).count
+            number = (saveDeta.object(forKey: "array") as! [String]).count
             print(number)
            }
       
@@ -46,10 +47,13 @@ class MemoSetViewController: UIViewController,UITextFieldDelegate {
                
            } else {
            
-            contentsArray = saveDeta.object(forKey: "memo") as! [String]
-            print(contentsArray)
-            print(contentsArray[number-1])
-            number = (saveDeta.object(forKey: "memo") as! [String]).count
+        //    contentsArray = saveDeta.object(forKey: "memo") as! [String]
+        //    print(contentsArray)
+         //   print(contentsArray[number-1])
+              array = saveDeta.object(forKey: "array") as! [String]
+               print(array)
+           //     print(array[number-1])
+            number = (saveDeta.object(forKey: "array") as! [String]).count
             print(number)
             
           //  titleTextField.text = contentsArray[number-1]
@@ -59,14 +63,23 @@ class MemoSetViewController: UIViewController,UITextFieldDelegate {
        
        @IBAction func saveMemo() {
         
+       
         
-           print(contentsArray)
-           contentsArray.append(titleTextField.text!)
-           print(contentsArray)
+        
+        //   print(contentsArray)
+        //   contentsArray.append(titleTextField.text!)
+        //   print(contentsArray)
            
-           saveDeta.set(contentsArray, forKey: "memo")
+        //   saveDeta.set(contentsArray, forKey: "memo")
+        print(array)
+        array.append(titleTextField.text!)
+        print(array)
+        
+        storeArray[0] = array
+        
+        saveDeta.set(storeArray, forKey: "store")
            
-           print(UserDefaults.standard.object(forKey: "memo"))
+           print(UserDefaults.standard.object(forKey: "store"))
            
            let alert: UIAlertController = UIAlertController(title: "保存", message: "メモの保存が完了しました", preferredStyle: .alert)
            

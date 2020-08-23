@@ -83,13 +83,37 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
 //        cell.textLabel!.text = titleDeta[indexPath.row]
 //        return cell
 //    }
+//    ikerukamo
+ //   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+ //              if segue.identifier == "toMemo"{
+ //                  let MemoVC: KyarazukannViewController = segue.description as! KyarazukannViewController
+       
+ //                  MemoVC.number = sender as! Int
+ //              }
+ //          }
+   
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
- //        number = indexPath.row
+       //  number = indexPath.row
+    //    print(titleDeta[indexPath.row])
         tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "MemoViewController", sender: nil)
         
     }
+    
+    // ①セグエ実行前処理
+  //     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+           // ②Segueの識別子確認
+  //         if segue.identifier == "toView2" {
+    
+               // ③遷移先ViewCntrollerの取得
+   //            let nextView = segue.destination as! MemoViewController
+    
+               // ④値の設定
+  //             nextView.argString = table.text!
+   //       }
+    //   }
     
    
    
@@ -98,13 +122,7 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
     //        performSegue(withIdentifier: "toMemo", sender: indexPath.row)
     //    }
     //
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //        if segue.identifier == "toMemo"{
-    //            let MemoVC: KyarazukannViewController = segue.description as! KyarazukannViewController
-    //
-    //            MemoVC.number = sender as! Int
-    //        }
-    //    }
+       
     //
     
     /*

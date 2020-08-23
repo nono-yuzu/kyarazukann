@@ -18,7 +18,10 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
     var saveDeta: UserDefaults = UserDefaults.standard
     var titleArray: Array = [String]()
     var array: [String] = []
-    
+     var storeArray: [[String]] = [[]]
+   //  var titleDeta: [String] = []
+    var argString = ""
+        
     @IBOutlet var titleTextField: UITextField!
     
       @IBOutlet var table: UITableView!
@@ -30,8 +33,15 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
         //titlededaのtiindexpathを表示する
     // = saveDeta.object(forKey: "store") as! [String]
         //ここが分からないです分からないです↑
-        
-    
+     //   storeArray[]
+        titleTextField.text = argString
+        array = storeArray[0]
+     
+    // print(titleDeta[number])
+  //      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+   //       print(array[indexPath.row])
+   //     }
+     UserDefaults.standard.register(defaults:["array":array])
        
         table.dataSource = self
         table.delegate = self
@@ -49,7 +59,7 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
     if saveDeta == nil {
                              
                       } else {
-                          number = (saveDeta.object(forKey: "memo") as! [String]).count
+                          number = (saveDeta.object(forKey: "array") as! [String]).count
                         print(number)
                          }
         
@@ -61,7 +71,7 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
         //    titleDeta = saveDeta.object(forKey: "memo") as! [String]
          //   print(titleDeta[number])
          //   titleTextField.text = titleDeta[number]
-              array = saveDeta.object(forKey: "memo") as! [String]
+              array = saveDeta.object(forKey: "array") as! [String]
               print(array[number-1])
               titleTextField.text = array[number-1]
           // print(array[number])
