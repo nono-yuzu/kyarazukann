@@ -20,8 +20,9 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
     var array: [String] = []
      var storeArray: [[String]] = [[]]
    //  var titleDeta: [String] = []
-    var argString = ""
-        
+//    var argString = ""
+    var MemoVC: KyarazukannViewController!
+    
     @IBOutlet var titleTextField: UITextField!
     
       @IBOutlet var table: UITableView!
@@ -34,7 +35,7 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
     // = saveDeta.object(forKey: "store") as! [String]
         //ここが分からないです分からないです↑
      //   storeArray[]
-        titleTextField.text = argString
+  //      titleTextField.text = argString
         array = storeArray[0]
      
     // print(titleDeta[number])
@@ -103,6 +104,12 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell!
         
     }
+    
+//     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//            self.MemoVC.detailText = self.storeArray[indexPath.row]
+ //           self.tableView.deselectRow(at: indexPath, animated: true)
+//        }
+//    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         

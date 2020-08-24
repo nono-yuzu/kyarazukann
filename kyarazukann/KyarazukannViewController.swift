@@ -84,13 +84,13 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
 //        return cell
 //    }
 //    ikerukamo
- //   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
- //              if segue.identifier == "toMemo"{
- //                  let MemoVC: KyarazukannViewController = segue.description as! KyarazukannViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+               if segue.identifier == "toMemo"{
+                   let MemoVC: KyarazukannViewController = segue.description as! KyarazukannViewController
        
- //                  MemoVC.number = sender as! Int
- //              }
- //          }
+                   MemoVC.number = sender as! Int
+               }
+           }
    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
