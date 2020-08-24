@@ -42,6 +42,8 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
   //      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
    //       print(array[indexPath.row])
    //     }
+//    number = MemoVC
+        
      UserDefaults.standard.register(defaults:["array":array])
        
         table.dataSource = self
