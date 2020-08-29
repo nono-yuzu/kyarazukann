@@ -17,6 +17,7 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
 
     var titleDeta: [String] = []
     var saveDeta: UserDefaults = UserDefaults.standard
+    var contentNumber: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,23 +85,27 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
 //        return cell
 //    }
 //    ikerukamo
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-               if segue.identifier == "toMemo"{
-                   let MemoVC: KyarazukannViewController = segue.description as! KyarazukannViewController
-       
-                   MemoVC.number = sender as! Int
-               }
-           }
+   
+    
+    
    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        //  number = indexPath.row
     //    print(titleDeta[indexPath.row])
-        tableView.deselectRow(at: indexPath, animated: true)
+     //   tableView.deselectRow(at: indexPath, animated: true)
+        contentNumber = indexPath.row
         performSegue(withIdentifier: "MemoViewController", sender: nil)
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "MemoViewController"{
+                let VC = segue.destination as! MemoViewController
+    
+                VC.recievedContentNumber = self.contentNumber
+            }
+        }
     // ①セグエ実行前処理
   //     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     

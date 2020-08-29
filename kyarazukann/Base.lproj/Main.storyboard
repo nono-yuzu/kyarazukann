@@ -213,7 +213,7 @@
                     <navigationItem key="navigationItem" id="srb-zz-7pY"/>
                     <connections>
                         <outlet property="table" destination="vc9-tf-oQH" id="qoP-mp-rt0"/>
-                        <segue destination="y8K-bp-3lR" kind="show" identifier="MemoViewController" id="HoS-18-zBo"/>
+                        <segue destination="y8K-bp-3lR" kind="show" identifier="MemoViewController" id="I5o-nW-PKm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bUg-9K-J1l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
