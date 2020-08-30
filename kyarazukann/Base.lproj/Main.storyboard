@@ -266,7 +266,11 @@
                         <viewLayoutGuide key="safeArea" id="yML-cx-qzq"/>
                     </view>
                     <navigationItem key="navigationItem" id="Jt8-w5-dxc">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="gH4-el-Ocb"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="gH4-el-Ocb">
+                            <connections>
+                                <action selector="memo" destination="y8K-bp-3lR" id="Grs-L5-yNB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="table" destination="Soe-Ph-LIA" id="gF2-Id-wrQ"/>

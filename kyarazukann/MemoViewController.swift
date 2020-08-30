@@ -94,8 +94,12 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
     //    }
     @IBAction func memo() {
         
+//var new = [String]()
        //上書きのコードを書く！！！！！
-        
+      //  titleDeta = saveDeta.object(forKey: "title") as! [String]
+   //     array.append(titleTextField.text!)
+        titleDeta[recievedContentNumber] = "おはよう"
+        saveDeta.set(titleDeta, forKey: "title")
         
         let alert: UIAlertController = UIAlertController(title: "保存", message: "メモの保存が完了しました", preferredStyle: .alert)
                
