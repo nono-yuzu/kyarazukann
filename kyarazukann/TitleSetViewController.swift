@@ -21,16 +21,18 @@ class TitleSetViewController: UIViewController, UITextFieldDelegate {
     var titleDeta: [String] = []
     var number:Int! = 0
     var saveDeta: UserDefaults = UserDefaults.standard
-    var storeArray: [[String]] = [[]]
+    var storeArray = [[String]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
+        
         
         
         
         UserDefaults.standard.register(defaults: ["title":titleDeta])
+        UserDefaults.standard.register(defaults: ["store":storeArray])
+        
         // Do any additional setup after loading the view.
     }
     
@@ -38,9 +40,9 @@ class TitleSetViewController: UIViewController, UITextFieldDelegate {
         super.viewWillAppear(animated)
         
         
-
- //       number = (saveDeta.object(forKey: "title") as! [String]).count
- //       print(number)
+        
+        //       number = (saveDeta.object(forKey: "title") as! [String]).count
+        //       print(number)
         
         
         if saveDeta == nil {
@@ -57,28 +59,30 @@ class TitleSetViewController: UIViewController, UITextFieldDelegate {
             titleDeta = saveDeta.object(forKey: "title") as! [String]
             print(titleDeta)
             number = (saveDeta.object(forKey: "title") as! [String]).count
-            print(number)
-            print(titleDeta[number-1])
+            
+            storeArray = saveDeta.object(forKey: "store") as! [[String]]
+            //print(number)
+            //print(titleDeta[number-1])
         }
         titleTextField.delegate = self
-        print(titleDeta)
+        //print(titleDeta)
     }
     
     @IBAction func saveMemo() {
         
-        let array: [String] = []
+        
+        storeArray.append([])
         print(storeArray)
-        storeArray.append(array)
         //storeArray.set()
         saveDeta.set(storeArray, forKey: "store")
-     //   print(saveDeta.object(forKey: "store") as! [String])
+        //   print(saveDeta.object(forKey: "store") as! [String])
         //print(titleDeta)
         titleDeta.append(titleTextField.text!)
-        print(titleDeta)
+        //print(titleDeta)
         //print(titleDeta)
         
         saveDeta.set(titleDeta, forKey: "title")
-        print(saveDeta.object(forKey: "title") as! [String])
+        //print(saveDeta.object(forKey: "title") as! [String])
         
         //print(UserDefaults.standard.object(forKey: "title"))
         

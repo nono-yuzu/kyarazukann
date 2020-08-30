@@ -258,17 +258,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="+"/>
                                 <connections>
-                                    <segue destination="19t-i5-6R3" kind="show" id="X5e-WV-MSA"/>
+                                    <action selector="append" destination="y8K-bp-3lR" eventType="touchUpInside" id="tmk-cM-KCZ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="yML-cx-qzq"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Jt8-w5-dxc"/>
+                    <navigationItem key="navigationItem" id="Jt8-w5-dxc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="gH4-el-Ocb"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="table" destination="Soe-Ph-LIA" id="gF2-Id-wrQ"/>
                         <outlet property="titleTextField" destination="EFL-cb-oQH" id="fp3-R6-g82"/>
+                        <segue destination="19t-i5-6R3" kind="show" identifier="MemoSetViewController" id="77R-5f-xZc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4kH-fT-AYr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -53,7 +53,8 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
         } else {
             titleDeta = saveDeta.object(forKey: "title") as! [String]
             //問題あり
-        print(titleDeta[number-1])
+      //  print(titleDeta[number-1])
+            print(titleDeta)
                       
         
         }
