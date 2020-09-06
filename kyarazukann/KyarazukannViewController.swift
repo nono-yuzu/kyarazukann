@@ -18,11 +18,14 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
     var titleDeta: [String] = []
     var saveDeta: UserDefaults = UserDefaults.standard
     var contentNumber: Int!
+    var removenumber: Int!
+    var storeArray = [[String]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         UserDefaults.standard.register(defaults: ["title":titleDeta])
+          UserDefaults.standard.register(defaults: ["store":storeArray])
        // userDefaults.register(defaults: ["title": titleDeta]
       // ここをどーにかする!
    
@@ -52,7 +55,7 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
             
         } else {
             titleDeta = saveDeta.object(forKey: "title") as! [String]
-            //問題あり
+            
       //  print(titleDeta[number-1])
             print(titleDeta)
                       
@@ -86,7 +89,15 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
 //        return cell
 //    }
 //    ikerukamo
-   
+   func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    //  titleDeta.remove(at: indexPath.row)
+    self.titleDeta.remove(at: indexPath.row)
+//    removenumber = (storeArray[indexPath.row]).count
+ //   self.storeArray.remove(at: removenumber)
+    UserDefaults.standard.set(titleDeta, forKey: "title" )
+ //   UserDefaults.standard.set(storeArray, forKey: "store" )
+       tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+   }
     
     
    
