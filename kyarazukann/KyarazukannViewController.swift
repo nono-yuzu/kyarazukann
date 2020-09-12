@@ -41,13 +41,13 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
     
   override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print(number)
+        
     
     if saveDeta == nil {
                       
                } else {
                    number = (saveDeta.object(forKey: "title") as! [String]).count
-                   print(number)
+                
                   }
 
 
@@ -55,13 +55,10 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
             
         } else {
             titleDeta = saveDeta.object(forKey: "title") as! [String]
-            
-      //  print(titleDeta[number-1])
-            print(titleDeta)
+            storeArray = saveDeta.object(forKey: "store") as! [[String]]
                       
         
         }
-        print(titleDeta)
         
     table.reloadData()
     }
@@ -89,15 +86,14 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
 //        return cell
 //    }
 //    ikerukamo
-   func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//   func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
     //  titleDeta.remove(at: indexPath.row)
-    self.titleDeta.remove(at: indexPath.row)
-//    removenumber = (storeArray[indexPath.row]).count
- //   self.storeArray.remove(at: removenumber)
-    UserDefaults.standard.set(titleDeta, forKey: "title" )
- //   UserDefaults.standard.set(storeArray, forKey: "store" )
-       tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
-   }
+//    self.titleDeta.remove(at: indexPath.row)
+  
+//    UserDefaults.standard.set(titleDeta, forKey: "title" )
+//    UserDefaults.standard.set(storeArray, forKey: "store" )
+//       tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+//   }
     
     
    
@@ -118,6 +114,25 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
                 VC.recievedContentNumber = self.contentNumber
             }
         }
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+       {
+           return true
+       }
+    
+     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        contentNumber = indexPath.row
+        print(contentNumber!)
+        print(storeArray)
+     //   print(titleDeta)
+        self.titleDeta.remove(at: indexPath.row)
+        
+         self.storeArray.remove(at: contentNumber!)
+        UserDefaults.standard.set(titleDeta, forKey: "title" )
+        UserDefaults.standard.set(storeArray, forKey: "store" )
+           tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+        
+        table.reloadData()
+       }
     // ①セグエ実行前処理
   //     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     

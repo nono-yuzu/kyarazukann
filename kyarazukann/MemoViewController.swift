@@ -10,9 +10,6 @@ import UIKit
 
 class MemoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    //  @IBOutlet var titleTextField: UITextField!
-    //  @IBOutlet var table: UITableView!
-    
     var titleDeta: [String] = []
     //   var number:Int! = nil
     var number = Int()
@@ -22,15 +19,11 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
     var storeArray: [[String]] = [[]]
     var recievedContentNumber: Int!
     
-    //  var titleDeta: [String] = []
-    //    var argString = ""
-    //  var MemoVC: KyarazukannViewController!
-    
     @IBOutlet var titleTextField: UITextField!
     
     //    titleTextField.text = recievedContentNumber
     
-    
+
     @IBOutlet var table: UITableView!
     
     override func viewDidLoad() {
@@ -44,32 +37,22 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
         table.reloadData()
         
     }
-    
-    
-    
-    
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        print(recievedContentNumber!)
-        
-        array = (saveDeta.object(forKey: "store") as! [[String]])[recievedContentNumber]
-        
-        print((saveDeta.object(forKey: "store") as! [[String]])[recievedContentNumber!])
-        
-
+        print("このした")
+         print(saveDeta.object(forKey: "store") as! [[String]])
         
         if (saveDeta.object(forKey: "store") as! [[String]])[recievedContentNumber!] == nil {
             
-            
-           // storeArray[recievedContentNumber - 1] == nil {
-            
         } else {
             number = (saveDeta.object(forKey: "array") as! [String]).count
+            
+            print("このしたにnumber")
             print(number)
+            
         }
-        
         
         if number == nil {
             
@@ -77,16 +60,11 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             titleDeta = saveDeta.object(forKey: "title") as! [String]
             titleTextField.text = titleDeta[recievedContentNumber]
-            print(titleDeta[recievedContentNumber])
-            
+            //            print(titleDeta[recievedContentNumber])
+            array = (saveDeta.object(forKey: "store") as! [[String]])[recievedContentNumber]
         }
         
-        
-        print(array)
-        
         table.reloadData()
-        
-        
     }
     
     //    func tableView(_ tableView: UITableView, numberOfRowsInSection: Int) -> Int {
@@ -94,26 +72,25 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
     //    }
     @IBAction func memo() {
         
-//var new = [String]()
-       //上書きのコードを書く！！！！！
-      //  titleDeta = saveDeta.object(forKey: "title") as! [String]
-   //     array.append(titleTextField.text!)
-  //      titleDeta[recievedContentNumber] = "おはよう"
-   //     saveDeta.set(titleDeta, forKey: "title")
+        
+        //上書きのコードを書く！！！！！
+        //    titleDeta = saveDeta.object(forKey: "title") as! [String]
+        titleDeta[recievedContentNumber] = titleTextField.text!
+        saveDeta.set(titleDeta, forKey: "title")
         
         let alert: UIAlertController = UIAlertController(title: "保存", message: "メモの保存が完了しました", preferredStyle: .alert)
-               
-               alert.addAction(
-                   UIAlertAction(
-                       title: "OK",
-                       style: .default,
-                       handler: { action in
-                           
-                           self.navigationController?.popViewController(animated: true)
-                   }
-                   )
-               )
-               present(alert, animated: true, completion: nil)
+        
+        alert.addAction(
+            UIAlertAction(
+                title: "OK",
+                style: .default,
+                handler: { action in
+                    
+                    self.navigationController?.popViewController(animated: true)
+            }
+            )
+        )
+        present(alert, animated: true, completion: nil)
         
     }
     
@@ -154,6 +131,36 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+    {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        //配列の配列
+        //array = (saveDeta.object(forKey: "store") as! [[String]])[recievedContentNumber]
+        self.array.remove(at: indexPath.row)
+        print("消した直後")
+        print(array)
+        //  (saveDeta.object(forKey: "store") as! [[String]])[recievedContentNumber] = array
+       // storeArray[[]]
+        storeArray[recievedContentNumber] = array
+        UserDefaults.standard.set(storeArray, forKey: "store" )
+        
+        tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+        
+        print(array)
+        
+        table.reloadData()
+        print("最終的な状態。")
+        print(array)
+        
+        
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "MemoSetViewController"{
             let VC = segue.destination as! MemoSetViewController
@@ -161,10 +168,7 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
             VC.recievedrecievedContentNumber = self.recievedContentNumber
         }
     }
-        
-        
-        
-        
-        
+    
+    
 }
 
