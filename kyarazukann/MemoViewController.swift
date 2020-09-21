@@ -19,6 +19,8 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
     var storeArray: [[String]] = [[]]
     var recievedContentNumber: Int!
     
+    
+    
     @IBOutlet var titleTextField: UITextField!
     
     //    titleTextField.text = recievedContentNumber
@@ -30,6 +32,7 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         
         UserDefaults.standard.register(defaults:["array":array])
+       // UserDefaults.standard.register(defaults:["store":storeArray])
         
         table.dataSource = self
         table.delegate = self
@@ -138,16 +141,19 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        print(recievedContentNumber!)
+         var storeArray = saveDeta.object(forKey: "store") as! [[String]]
         
         //配列の配列
         //array = (saveDeta.object(forKey: "store") as! [[String]])[recievedContentNumber]
+    //    array = storeArray[recievedContentNumber]
         self.array.remove(at: indexPath.row)
         print("消した直後")
         print(array)
         //  (saveDeta.object(forKey: "store") as! [[String]])[recievedContentNumber] = array
        // storeArray[[]]
         storeArray[recievedContentNumber] = array
-        UserDefaults.standard.set(storeArray, forKey: "store" )
+        UserDefaults.standard.set(storeArray, forKey: "store")
         
         tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
         
