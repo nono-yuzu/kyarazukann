@@ -31,9 +31,10 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         UserDefaults.standard.register(defaults:["array":array])
        // UserDefaults.standard.register(defaults:["store":storeArray])
-        
+        table.separatorColor = .brown
         table.dataSource = self
         table.delegate = self
         

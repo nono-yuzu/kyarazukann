@@ -10,11 +10,7 @@ import UIKit
 
 class TitleSetViewController: UIViewController, UITextFieldDelegate {
     
-    //    override func viewDidLoad() {
-    //      super.viewDidLoad()
-    
-    // Do any additional setup after loading the view.
-    // }
+ 
     
     @IBOutlet var titleTextField: UITextField!
     
@@ -28,7 +24,7 @@ class TitleSetViewController: UIViewController, UITextFieldDelegate {
         
         
         
-        
+      
         
         UserDefaults.standard.register(defaults: ["title":titleDeta])
         UserDefaults.standard.register(defaults: ["store":storeArray])
@@ -41,8 +37,7 @@ class TitleSetViewController: UIViewController, UITextFieldDelegate {
         
         
         
-        //       number = (saveDeta.object(forKey: "title") as! [String]).count
-        //       print(number)
+       
         
         
         if saveDeta == nil {
@@ -61,11 +56,10 @@ class TitleSetViewController: UIViewController, UITextFieldDelegate {
             number = (saveDeta.object(forKey: "title") as! [String]).count
             
             storeArray = saveDeta.object(forKey: "store") as! [[String]]
-            //print(number)
-            //print(titleDeta[number-1])
+           
         }
         titleTextField.delegate = self
-        //print(titleDeta)
+      
     }
     
     @IBAction func saveMemo() {
@@ -73,18 +67,15 @@ class TitleSetViewController: UIViewController, UITextFieldDelegate {
         
         storeArray.append([])
         print(storeArray)
-        //storeArray.set()
+        
         saveDeta.set(storeArray, forKey: "store")
-        //   print(saveDeta.object(forKey: "store") as! [String])
-        //print(titleDeta)
+       
         titleDeta.append(titleTextField.text!)
-        //print(titleDeta)
-        //print(titleDeta)
+       
         
         saveDeta.set(titleDeta, forKey: "title")
-        //print(saveDeta.object(forKey: "title") as! [String])
-        
-        //print(UserDefaults.standard.object(forKey: "title"))
+       
+       
         
         let alert: UIAlertController = UIAlertController(title: "保存", message: "メモの保存が完了しました", preferredStyle: .alert)
         

@@ -28,7 +28,7 @@ class MemoSetViewController: UIViewController,UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+    
         //   UserDefaults.standard.register(defaults:["memo":contentsArray])
         
         //UserDefaults.standard.register(defaults:["array":array])
