@@ -58,6 +58,8 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
             self.navigationController?.navigationBar.titleTextAttributes = [
            
                 .foregroundColor: UIColor.brown
+                
+                
             ]
         
     }
@@ -108,24 +110,7 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
         return cell!
         
     }
-    //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
-    //        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-    
-    //        cell.textLabel!.text = titleDeta[indexPath.row]
-    //        return cell
-    //    }
-    //    ikerukamo
-    //   func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-    //  titleDeta.remove(at: indexPath.row)
-    //    self.titleDeta.remove(at: indexPath.row)
-    
-    //    UserDefaults.standard.set(titleDeta, forKey: "title" )
-    //    UserDefaults.standard.set(storeArray, forKey: "store" )
-    //       tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
-    //   }
-    
-    
+   
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -163,21 +148,22 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
         
         table.reloadData()
     }
-    // ①セグエ実行前処理
-    //     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
-    // ②Segueの識別子確認
-    //         if segue.identifier == "toView2" {
-    
-    // ③遷移先ViewCntrollerの取得
-    //            let nextView = segue.destination as! MemoViewController
-    
-    // ④値の設定
-    //             nextView.argString = table.text!
-    //       }
-    //   }
+    var checknumber: Int = 0
     
     
+    @IBAction func check(_ sender: Any) {
+     checknumber = checknumber + 1
+        if checknumber == 1 {
+            checklabel.text = String("⭐️")
+        } else {
+            checklabel.text = String("☆")
+            checknumber = 0
+        }
+    }
+    
+  
+  
     
     //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     //        tableView.deselectRow(at: indexPath, animated: true)
