@@ -161,18 +161,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="250-dB-dt2">
-                                                    <rect key="frame" x="352" y="17" width="42" height="35"/>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAx-Ns-Eg2">
+                                                    <rect key="frame" x="348" y="15" width="46" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1LQ-jg-BKb">
-                                                    <rect key="frame" x="358" y="15" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
                                                     <connections>
-                                                        <action selector="check:" destination="vYj-3t-0fe" eventType="touchUpInside" id="Mrh-P0-17C"/>
+                                                        <action selector="check:" destination="AlG-aU-uMm" eventType="touchUpInside" id="oKl-Q3-Ev8"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -187,14 +181,13 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="srb-zz-7pY"/>
                     <connections>
-                        <outlet property="checklabel" destination="250-dB-dt2" id="fak-Qy-BI8"/>
                         <outlet property="table" destination="vc9-tf-oQH" id="qoP-mp-rt0"/>
                         <segue destination="y8K-bp-3lR" kind="show" identifier="MemoViewController" id="I5o-nW-PKm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bUg-9K-J1l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1628.985507246377" y="72.554347826086968"/>
+            <point key="canvasLocation" x="1817" y="55"/>
         </scene>
         <!--Memo View Controller-->
         <scene sceneID="Bee-58-9oN">

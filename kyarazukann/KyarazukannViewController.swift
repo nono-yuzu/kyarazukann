@@ -149,20 +149,59 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
         table.reloadData()
     }
     
+//
+    @IBOutlet var checklabel: UILabel!
     var checknumber: Int = 0
-    
+//    @IBOutlet weak var buttonCat: UIButton!
     
     @IBAction func check(_ sender: Any) {
-     checknumber = checknumber + 1
-        if checknumber == 1 {
-            checklabel.text = String("⭐️")
-        } else {
-            checklabel.text = String("☆")
+    checknumber = checknumber + 1
+       if checknumber == 1 {
+        print(checknumber)
+        //checklabel.setTitleColor(UIColor.white, for: UIControl.State.normal)
+      //  check.setTitleColor(UIColor.red, for: .normal)
+       // self.button.setTitleColor(UIColor.whiteColor, forState: .Normal)
+           // checklabel.text = String("⭐️")
+//    buttonCat.setTitle("⭐️", for: .normal)
+       } else {
+        
+        //    checklabel.text = String("☆")
+//            buttonCat.setTitle("☆", for: .normal)
             checknumber = 0
         }
-    }
+        print(checknumber)
+   }
+  //  @IBOutlet var label: UILabel!
     
-  
+  //  @IBAction func tappedButton(_ sender: UIButton) {
+
+ //          sender.switchAction(onAction: {
+ //              self.label.text = "ONになったよ！"
+ //          }) {
+ //              self.label.text = "OFFになったよ！"
+ //          }
+ //      }
+
+ //  }
+
+ //  extension UIButton {
+
+ //      func switchAction(onAction: @escaping ()->Void, offAction: @escaping ()->Void) {
+
+           //選択状態を反転
+  //         self.isSelected = !self.isSelected
+
+ //          switch self.isSelected {
+ //          case true:
+               //ONにする時に走らせたい処理
+  //             onAction()
+  //         case false:
+               //OFFにする時に走らせたい処理
+  //             offAction()
+  //         }
+
+   //    }
+  // }
   
     
     //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -183,4 +222,7 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
      }
      */
     
+      
+    
+
 }
