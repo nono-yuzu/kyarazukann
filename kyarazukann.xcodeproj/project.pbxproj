@@ -11,6 +11,9 @@
 		FF3FA36924E76722007633F7 /* スクリーンショット 2020-08-15 9.42.48.png in Resources */ = {isa = PBXBuildFile; fileRef = FF3FA36824E76721007633F7 /* スクリーンショット 2020-08-15 9.42.48.png */; };
 		FF3FA36B24E768E7007633F7 /* スクリーンショット 2020-08-15 9.49.58.png in Resources */ = {isa = PBXBuildFile; fileRef = FF3FA36A24E768E7007633F7 /* スクリーンショット 2020-08-15 9.49.58.png */; };
 		FF3FA36D24E768F3007633F7 /* スクリーンショット 2020-08-15 9.50.18.png in Resources */ = {isa = PBXBuildFile; fileRef = FF3FA36C24E768F3007633F7 /* スクリーンショット 2020-08-15 9.50.18.png */; };
+		FF827B79256100B6006E274B /* スクリーンショット 2020-11-03 14.13.42.png in Resources */ = {isa = PBXBuildFile; fileRef = FF827B77256100B6006E274B /* スクリーンショット 2020-11-03 14.13.42.png */; };
+		FF827B7A256100B6006E274B /* スクリーンショット 2020-11-03 14.13.19.png in Resources */ = {isa = PBXBuildFile; fileRef = FF827B78256100B6006E274B /* スクリーンショット 2020-11-03 14.13.19.png */; };
+		FF827B7F256106A4006E274B /* KyarazukannCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF827B7E256106A4006E274B /* KyarazukannCell.swift */; };
 		FFE799E0248779F60065DC6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE799DF248779F60065DC6E /* AppDelegate.swift */; };
 		FFE799E2248779F60065DC6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE799E1248779F60065DC6E /* SceneDelegate.swift */; };
 		FFE799E4248779F60065DC6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE799E3248779F60065DC6E /* ViewController.swift */; };
@@ -48,6 +51,9 @@
 		FF3FA36824E76721007633F7 /* スクリーンショット 2020-08-15 9.42.48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "スクリーンショット 2020-08-15 9.42.48.png"; sourceTree = "<group>"; };
 		FF3FA36A24E768E7007633F7 /* スクリーンショット 2020-08-15 9.49.58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "スクリーンショット 2020-08-15 9.49.58.png"; sourceTree = "<group>"; };
 		FF3FA36C24E768F3007633F7 /* スクリーンショット 2020-08-15 9.50.18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "スクリーンショット 2020-08-15 9.50.18.png"; sourceTree = "<group>"; };
+		FF827B77256100B6006E274B /* スクリーンショット 2020-11-03 14.13.42.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "スクリーンショット 2020-11-03 14.13.42.png"; sourceTree = "<group>"; };
+		FF827B78256100B6006E274B /* スクリーンショット 2020-11-03 14.13.19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "スクリーンショット 2020-11-03 14.13.19.png"; sourceTree = "<group>"; };
+		FF827B7E256106A4006E274B /* KyarazukannCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KyarazukannCell.swift; sourceTree = "<group>"; };
 		FFBBAFFA253C6CE600A83341 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		FFBBAFFB253C6CEA00A83341 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		FFE799DC248779F60065DC6E /* kyarazukann.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kyarazukann.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +141,9 @@
 				FFE79A6624A75A980065DC6E /* MemoSetViewController.swift */,
 				FFE79A60249CB0730065DC6E /* MemoViewController.swift */,
 				FFE79A6424A7305A0065DC6E /* NoteViewController.swift */,
+				FF827B78256100B6006E274B /* スクリーンショット 2020-11-03 14.13.19.png */,
+				FF827B77256100B6006E274B /* スクリーンショット 2020-11-03 14.13.42.png */,
+				FF827B7E256106A4006E274B /* KyarazukannCell.swift */,
 			);
 			path = kyarazukann;
 			sourceTree = "<group>";
@@ -266,8 +275,10 @@
 				FF3FA36B24E768E7007633F7 /* スクリーンショット 2020-08-15 9.49.58.png in Resources */,
 				FF3FA36924E76722007633F7 /* スクリーンショット 2020-08-15 9.42.48.png in Resources */,
 				FF3FA36D24E768F3007633F7 /* スクリーンショット 2020-08-15 9.50.18.png in Resources */,
+				FF827B79256100B6006E274B /* スクリーンショット 2020-11-03 14.13.42.png in Resources */,
 				FFE799EC248779FC0065DC6E /* LaunchScreen.storyboard in Resources */,
 				FFE799E9248779FC0065DC6E /* Assets.xcassets in Resources */,
+				FF827B7A256100B6006E274B /* スクリーンショット 2020-11-03 14.13.19.png in Resources */,
 				FFE799E7248779F60065DC6E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +307,7 @@
 				FFE79A6524A7305A0065DC6E /* NoteViewController.swift in Sources */,
 				FFE79A6324A72A0A0065DC6E /* TitleSetViewController.swift in Sources */,
 				FFE799E4248779F60065DC6E /* ViewController.swift in Sources */,
+				FF827B7F256106A4006E274B /* KyarazukannCell.swift in Sources */,
 				FFE799E0248779F60065DC6E /* AppDelegate.swift in Sources */,
 				FFE79A61249CB0730065DC6E /* MemoViewController.swift in Sources */,
 				FFE79A12248845D10065DC6E /* KyarazukannViewController.swift in Sources */,

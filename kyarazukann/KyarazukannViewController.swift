@@ -149,28 +149,9 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
         table.reloadData()
     }
     
-//
-    @IBOutlet var checklabel: UILabel!
-    var checknumber: Int = 0
-//    @IBOutlet weak var buttonCat: UIButton!
-    
-    @IBAction func check(_ sender: Any) {
-    checknumber = checknumber + 1
-       if checknumber == 1 {
-        print(checknumber)
-        //checklabel.setTitleColor(UIColor.white, for: UIControl.State.normal)
-      //  check.setTitleColor(UIColor.red, for: .normal)
-       // self.button.setTitleColor(UIColor.whiteColor, forState: .Normal)
-           // checklabel.text = String("⭐️")
-//    buttonCat.setTitle("⭐️", for: .normal)
-       } else {
-        
-        //    checklabel.text = String("☆")
-//            buttonCat.setTitle("☆", for: .normal)
-            checknumber = 0
-        }
-        print(checknumber)
-   }
+ 
+  
+
   //  @IBOutlet var label: UILabel!
     
   //  @IBAction func tappedButton(_ sender: UIButton) {
@@ -182,7 +163,7 @@ class KyarazukannViewController: UIViewController, UITableViewDelegate, UITableV
  //          }
  //      }
 
- //  }
+//  }
 
  //  extension UIButton {
 
