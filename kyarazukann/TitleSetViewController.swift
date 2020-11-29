@@ -18,6 +18,8 @@ class TitleSetViewController: UIViewController, UITextFieldDelegate {
     var number:Int! = 0
     var saveDeta: UserDefaults = UserDefaults.standard
     var storeArray = [[String]]()
+    var ifArray = [Bool]()
+    var favoriteFlag: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,7 @@ class TitleSetViewController: UIViewController, UITextFieldDelegate {
         
         UserDefaults.standard.register(defaults: ["title":titleDeta])
         UserDefaults.standard.register(defaults: ["store":storeArray])
+        UserDefaults.standard.register(defaults: ["if":ifArray])
         
         // Do any additional setup after loading the view.
     }
@@ -54,9 +57,8 @@ class TitleSetViewController: UIViewController, UITextFieldDelegate {
             titleDeta = saveDeta.object(forKey: "title") as! [String]
             print(titleDeta)
             number = (saveDeta.object(forKey: "title") as! [String]).count
-            
             storeArray = saveDeta.object(forKey: "store") as! [[String]]
-           
+            ifArray = saveDeta.object(forKey: "if") as! [Bool]
         }
         titleTextField.delegate = self
       
@@ -69,12 +71,10 @@ class TitleSetViewController: UIViewController, UITextFieldDelegate {
         print(storeArray)
         
         saveDeta.set(storeArray, forKey: "store")
-       
         titleDeta.append(titleTextField.text!)
-       
-        
         saveDeta.set(titleDeta, forKey: "title")
-       
+        ifArray.append(false)
+        saveDeta.set(ifArray, forKey: "if")
        
         
         let alert: UIAlertController = UIAlertController(title: "保存", message: "メモの保存が完了しました", preferredStyle: .alert)
